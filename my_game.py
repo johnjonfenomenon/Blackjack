@@ -67,12 +67,14 @@ class Hand:
             if self.value > 21:
                 self.value -= 10
                 self.aces  -= 1
+            else:
+                break
 
     def __str__(self):
         cards_in_hand = ''
         for c in self.cards:
             cards_in_hand += '\n '+ c.__str__()
-        return '\n' + self.who +'\'s Hand:\n' + cards_in_hand
+        return '\n' + self.who +'\'s Hand:\n' + cards_in_hand 
 
 
 class Chips:
